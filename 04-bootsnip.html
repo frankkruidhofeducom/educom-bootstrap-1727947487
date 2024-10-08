@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <title>#12 Grid Examples</title>
+    <style>
+      body {
+        padding: 20px;
+      }
+      .gray {
+        background-color: #aaa;
+        text-align: center;
+        padding: 40px;
+        border: 1px solid #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form-horizontal">
+      <fieldset>
+        <!-- Form Name -->
+        <legend>Contact form</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="Naam">Naam</label>
+          <div class="col-md-4">
+            <input
+              id="Naam"
+              name="Naam"
+              type="text"
+              placeholder="John Doe"
+              class="form-control input-md"
+              required=""
+            />
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="Email">Email</label>
+          <div class="col-md-4">
+            <input
+              id="Email"
+              name="Email"
+              type="text"
+              placeholder="john.doe@example.nl"
+              class="form-control input-md"
+              required=""
+            />
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="Tel">Tel</label>
+          <div class="col-md-4">
+            <input
+              id="Tel"
+              name="Tel"
+              type="text"
+              placeholder=" "
+              class="form-control input-md"
+            />
+          </div>
+        </div>
+
+        <!-- Button Drop Down -->
+        <div class="form-group">
+          <div class="col-md-4">
+            <div class="input-group">
+              <div class="input-group-btn">
+                <button
+                  type="button"
+                  class="btn btn-default dropdown-toggle"
+                  data-toggle="dropdown"
+                >
+                  Project-size
+                  <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-value="Small"
+                      title="Expected time needed: less then 1 month"
+                      >Small</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-value="Medium"
+                      title="Expected time needed: between 1 and 3 months"
+                      >Medium</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="#"
+                      data-value="Big"
+                      title="Expected time needed: over 3 months"
+                      >Big</a
+                    >
+                  </li>
+                </ul>
+                <input
+                  type="text"
+                  id="textInput"
+                  class="form0control mt-3"
+                  placeholder=" "
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="Onderwerp"
+            >Onderwerp</label
+          >
+          <div class="col-md-4">
+            <input
+              id="Onderwerp"
+              name="Onderwerp"
+              type="text"
+              placeholder=""
+              class="form-control input-md"
+            />
+          </div>
+        </div>
+
+        <!-- Textarea -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="Message">Message</label>
+          <div class="col-md-4">
+            <textarea
+              class="form-control"
+              id="Message"
+              name="Message"
+            ></textarea>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".dropdown-item").click(function () {
+          //         alert($(this).data("value"));
+          var selectedValue = $(this).data("value");
+          $("#textInput").val(selectedValue);
+        });
+      });
+    </script>
+  </body>
+</html>
